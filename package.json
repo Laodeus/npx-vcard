@@ -1,0 +1,15 @@
+{
+  "name": "npxvcard",
+  "version": "0.0.1",
+  "description": "Laodeus v-card",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laodeus",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^4.1.0",
+    "figlet": "^1.2.3"
+  }
+}
