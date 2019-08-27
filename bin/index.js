@@ -1,10 +1,18 @@
+#!/usr/bin/env node
+
 const fs = require("fs");
 const boxen = require('boxen');
 var figlet = require('figlet');
 
 console.clear(); 
+const vcardownerInfo = {
+    firstName:"Jonathan",
+    secondName:"Atta",
+    completeName:"Jonathan Atta"
+}
 
-if(  process.argv[2] == "hisGreatVoice"){
+
+if(process.argv[2] == "hisGreatVoice"){
     fs.readFile('cthulu.json', 'utf8', function(err, contents) {
         const quote = JSON.parse(contents);
 
@@ -42,8 +50,11 @@ if(  process.argv[2] == "joke"){
 
 if(  process.argv[2] == "theLittleGreatOne"){
     fs.readFile('littleCthulu', 'utf8', function(err, contents) {
-        console.log(contents);
-    });
+            console.log(contents);
+            console.log(err);
+            
+        });
+    
 }
 
 if(  process.argv[2] == "theGreatOne"){
@@ -53,4 +64,7 @@ if(  process.argv[2] == "theGreatOne"){
 }
 
 
-
+console.log(boxen(`
+name   :${vcardownerInfo.completeName}
+pseudo : 
+`));
