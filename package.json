@@ -3,7 +3,7 @@
   "bin": {
     "vcard": "./bin/index.js"
   },
-  "version": "0.0.9",
+  "version": "0.0.20",
   "description": "Laodeus v-card",
   "main": "./bin/index.js",
   "scripts": {

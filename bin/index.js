@@ -8,12 +8,17 @@ console.clear();
 const vcardownerInfo = {
     firstName:"Jonathan",
     secondName:"Atta",
-    completeName:"Jonathan Atta"
+    completeName:"Jonathan Atta",
+    email:"atta.jon.t@gmail.com",
+    pseudo:"laodeus",
+    github:"https://github.com/Laodeus/",
+    linkedin:"https://www.linkedin.com/in/laodeus",
+    npx:"@laodeus/vcard"
 }
 
 
 if(process.argv[2] == "hisGreatVoice"){
-    fs.readFile('cthulu.json', 'utf8', function(err, contents) {
+    fs.readFile(`${__dirname}/../cthulu.json`, 'utf8', function(err, contents) {
         const quote = JSON.parse(contents);
 
         let randQuote = Math.floor(Math.random() * (quote.text.length - 1 + 1) ) + 1; 
@@ -37,7 +42,7 @@ ${quote.author}`;
     });
 }
 
-if(  process.argv[2] == "joke"){
+if(process.argv[2] == "joke"){
     console.log(boxen(`
    
     Q: How many Lovecraftian protagonists does it take to screw in a light bulb?
@@ -49,22 +54,27 @@ if(  process.argv[2] == "joke"){
 }
 
 if(  process.argv[2] == "theLittleGreatOne"){
-    fs.readFile('littleCthulu', 'utf8', function(err, contents) {
+    fs.readFile(`${__dirname}/../littleCthulu`, 'utf8', function(err, contents) {
             console.log(contents);
-            console.log(err);
-            
         });
     
 }
 
 if(  process.argv[2] == "theGreatOne"){
-    fs.readFile('cthulu', 'utf8', function(err, contents) {
+    fs.readFile(`${__dirname}/../cthulu`, 'utf8', function(err, contents) {
         console.log(contents);
     });
 }
 
 
 console.log(boxen(`
-name   :${vcardownerInfo.completeName}
-pseudo : 
+name    :${vcardownerInfo.completeName}
+pseudo  :${vcardownerInfo.completeName}
+email   :${vcardownerInfo.email}
+
+github  :${vcardownerInfo.github}
+linkedin:${vcardownerInfo.linkedin}
+
+npx card:${vcardownerInfo.npx}
+
 `));
